@@ -1,6 +1,6 @@
-import React from 'react'
 import ChatInterface from '@/components/ChatInterface'
 import ElectionRoadmap from '@/components/ElectionRoadmap'
+import PollingBoothFinder from '@/components/PollingBoothFinder'
 import { Bot } from 'lucide-react'
 
 export const metadata = {
@@ -42,6 +42,11 @@ export default function Home() {
             <ChatInterface />
           </section>
         </div>
+
+        <section aria-labelledby="maps-heading" className="mt-12">
+          <h2 id="maps-heading" className="sr-only">Polling Booth Finder</h2>
+          <PollingBoothFinder />
+        </section>
       </main>
 
       <footer className="bg-zinc-900 text-zinc-400 py-6 text-center text-sm">

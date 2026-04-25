@@ -41,12 +41,12 @@ const PHASES = [
   },
 ]
 
-export default function ElectionRoadmap() {
+const ElectionRoadmap = React.memo(function ElectionRoadmap() {
   return (
     <div className="w-full max-w-3xl mx-auto p-4 sm:p-6 bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-zinc-200 dark:border-zinc-800">
       <h2 className="text-2xl font-bold mb-6 text-zinc-900 dark:text-white">Election Process Roadmap</h2>
       <div className="relative border-l-2 border-zinc-200 dark:border-zinc-700 ml-3 md:ml-4">
-        {PHASES.map((phase, index) => (
+        {PHASES.map((phase) => (
           <div key={phase.id} className="mb-8 ml-6 group">
             <span className="absolute flex items-center justify-center w-8 h-8 bg-blue-100 rounded-full -left-4 ring-4 ring-white dark:ring-zinc-900 dark:bg-blue-900">
               <span className="text-sm font-semibold text-blue-600 dark:text-blue-300">{phase.id}</span>
@@ -65,4 +65,6 @@ export default function ElectionRoadmap() {
       </div>
     </div>
   )
-}
+})
+
+export default ElectionRoadmap
